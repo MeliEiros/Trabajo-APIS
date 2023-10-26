@@ -1,19 +1,17 @@
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => document.querySelectorAll(selector);
 
-const seeView = (view) => {
-//$$(".view").forEach((view) => view.classList.add("is-hidden"));
-//$(`#${view}`).classList.remove("is-hidden");
-    $(".view").forEach((view) => view.classList.add("is-hidden"));
-    $(`#${view}`).classList.remove("is-hidden");
+const seeView = (vistaAMostrar) => {
+$$(".view").forEach((view) => view.classList.add("is-hidden"));
+$(`#${vistaAMostrar}`).classList.remove("is-hidden");
 };
 
-$("#crear").addEventListener("click", () =>
-    seeView("create-jobs")
+$("#list-jobs").addEventListener("click", () =>
+    vistaAMostrar("seeView")
 );
 
-$("#list-jobs").addEventListener("click", () => 
-    seeView("main")
+$("#create-job").addEventListener("click", () => 
+    vistaAMostrar("Seeview")
 );
 
 
