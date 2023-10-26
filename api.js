@@ -1,12 +1,3 @@
-// const $ = (selector) => document.querySelector(selector);
-// const $$ = (selector) => document.querySelectorAll(selector);
-
-// const seeView = (view) => {
-//     $$(".view").forEach((view) => view.classList.add("is-hidden"));
-//     $(`#${view}`).classList.remove("is-hidden");
-// };
-
-
 getJobs = async () => {
     seeView("loading");
 let response = await fetch (
@@ -14,7 +5,7 @@ let response = await fetch (
 );
 let data = await response.json();
 console.log(data);
-}
+};
 
 
 const seeJobs = (trabajos) => {
@@ -37,8 +28,9 @@ for (let trabajos of trabajos) {
         </div>
     </div>
     `;
-}
-}
+};
+};
+  getJobs ();
 // setTimeout(() => { 
 //     renderJobs(data);
 // }, 3000);
@@ -48,7 +40,7 @@ for (let trabajos of trabajos) {
 //         seeView('list-jobs');
 //     }
     
-    getJobs ();
+ 
 
 
 //fetch(
